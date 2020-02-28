@@ -23,7 +23,7 @@ public class JsonManager : MonoBehaviour
     {
         gameObjectList = new List<GameObjectInScene>();
     }
-    void SaveJson()
+    public void SaveJson()
     {
         StreamWriter f = new StreamWriter(path);
         saveobjects = GameObject.FindObjectsOfType<GameObject>();
