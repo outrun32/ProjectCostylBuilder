@@ -5,12 +5,20 @@ using UnityEngine;
 public class RemoveGravity : MonoBehaviour
 {
     Rigidbody rb;
-    private void OnTriggerEnter(Collider other)
+    public bool stay;
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Resource")
         {
+            stay = true;
             rb = other.GetComponent<Rigidbody>();
             rb.useGravity = false;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Resource"){
+            stay = false;
         }
     }
 }
