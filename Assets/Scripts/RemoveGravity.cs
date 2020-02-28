@@ -17,7 +17,8 @@ public class RemoveGravity : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Resource"){
+        if(other.tag == "Resource")
+        {
             stay = false;
         }
     }
