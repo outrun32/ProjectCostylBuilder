@@ -10,6 +10,7 @@ public class LaserInput : MonoBehaviour
 {
     public static GameObject thisobject;
     int CurrentID;
+    public LoadLevel lv;
     void Start()
     {
         thisobject = null;
@@ -32,10 +33,13 @@ public class LaserInput : MonoBehaviour
                 thisobject = hit.collider.gameObject;
 
                 string tag = thisobject.tag;
-                if(tag == "button")
+                if(thisobject.tag == "button1")
                 {
-                    //Button bt = thisobject.GetComponent<Button>();
-                    Debug.Log("Button clicked");
+                    lv.Load();
+                }
+                else if(thisobject.tag == "button2")
+                {
+                    lv.ExitPressed();
                 }
 
             }
