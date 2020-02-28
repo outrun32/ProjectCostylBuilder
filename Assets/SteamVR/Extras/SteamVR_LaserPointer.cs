@@ -29,10 +29,10 @@ namespace Valve.VR.Extras
 
         private void Start()
         {
-            /*if (pose == null)
+            if (pose == null)
                 pose = this.GetComponent<SteamVR_Behaviour_Pose>();
             if (pose == null)
-                Debug.LogError("No SteamVR_Behaviour_Pose component found on this object", this);*/
+                Debug.LogError("No SteamVR_Behaviour_Pose component found on this object", this);
 
             if (interactWithUI == null)
                 Debug.LogError("No ui interaction action has been set on this component.", this);
@@ -106,7 +106,7 @@ namespace Valve.VR.Extras
             if (previousContact && previousContact != hit.transform)
             {
                 PointerEventArgs args = new PointerEventArgs();
-               // args.fromInputSource = pose.inputSource;
+                args.fromInputSource = pose.inputSource;
                 args.distance = 0f;
                 args.flags = 0;
                 args.target = previousContact;
@@ -116,7 +116,7 @@ namespace Valve.VR.Extras
             if (bHit && previousContact != hit.transform)
             {
                 PointerEventArgs argsIn = new PointerEventArgs();
-                //argsIn.fromInputSource = pose.inputSource;
+                argsIn.fromInputSource = pose.inputSource;
                 argsIn.distance = hit.distance;
                 argsIn.flags = 0;
                 argsIn.target = hit.transform;
@@ -135,7 +135,7 @@ namespace Valve.VR.Extras
             if (bHit)
             {
                 PointerEventArgs argsClick = new PointerEventArgs();
-                //argsClick.fromInputSource = pose.inputSource;
+                argsClick.fromInputSource = pose.inputSource;
                 argsClick.distance = hit.distance;
                 argsClick.flags = 0;
                 argsClick.target = hit.transform;
