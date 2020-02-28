@@ -22,15 +22,6 @@ public class JsonManager : MonoBehaviour
     void Start()
     {
         gameObjectList = new List<GameObjectInScene>();
-        SaveJson(); 
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            Load();
-            Debug.Log("Fire1");
-        }
     }
     void SaveJson()
     {
