@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class saveA : MonoBehaviour
+public class Loads : MonoBehaviour
 {
     public JsonManager json;
     public Transform tr;
     public Vector3 startpos;
-    bool isSaved;
     void Start()
     {
         tr = GetComponent<Transform>();
@@ -19,8 +18,8 @@ public class saveA : MonoBehaviour
         if (!f && Vector3.Distance(startpos, tr.position) > 0.5f)
         {
             f = true;
-            json.SaveJson();
-            print("s");
+            json.Load();
+            print("l");
         }
 
     }

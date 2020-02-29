@@ -42,7 +42,7 @@ public class JsonManager : MonoBehaviour
         }
         f.Close();
     }
-    void Load()
+    public void Load()
     {
         StreamReader r = new StreamReader(path);
         for (int i = 0; i < gameObjectList.Count; i++)
