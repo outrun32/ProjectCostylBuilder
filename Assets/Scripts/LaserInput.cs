@@ -21,8 +21,8 @@ public class LaserInput : MonoBehaviour
     {
         RaycastHit[] hits;
         hits = Physics.RaycastAll(transform.position, transform.forward, 100.0f);
-
-        for(int i = 0; i < hits.Length; i++)
+        Debug.DrawRay(transform.position, transform.forward, Color.green);
+        for (int i = 0; i < hits.Length; i++)
         {
             RaycastHit hit = hits[i];
             int id = hit.collider.gameObject.GetInstanceID();

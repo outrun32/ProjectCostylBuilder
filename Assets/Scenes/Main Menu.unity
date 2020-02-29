@@ -451,9 +451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayTransform: {fileID: 0}
+  rayTransform: {fileID: 2077419773}
   m_Cursor: {fileID: 0}
-  joyPadClickButton: 1
+  joyPadClickButton: 16385
   gazeClickKey: 32
   performSphereCastForGazepointer: 0
   useRightStickScroll: 1
@@ -1078,6 +1078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1299,6 +1303,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1844283779}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2077419773 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1844283779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2077419774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,3 +1345,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2077419778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077419772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5991e0269e098584fae4ef3991bd614e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lv: {fileID: 1493201161}
